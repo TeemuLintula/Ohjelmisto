@@ -1,9 +1,13 @@
-def sum_of_list(number_list):
-    sum = 0
-    for number in number_list:
-        sum += number
-    return sum
+liters = 0
+gallons = 0
+def gallons_to_liters(gallons):
+    liters = gallons * 3.785
+    return liters
 
-number_list = [1, 2, 3, 4, 5]
-result = sum_of_list(number_list)
-print(f"The sum of the numbers in the list is: {result}")
+while True:
+    gallons = float(input("Enter a volume in American gallons (negative value to quit): "))
+    liters = gallons_to_liters(gallons)
+    if liters < 0:
+        break
+    print(gallons, f"American gallons is {liters:.2f} liters.")
+print("Program finished.")

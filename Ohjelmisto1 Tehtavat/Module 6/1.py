@@ -1,8 +1,7 @@
 import random
-maxnum = int(input("Enter the maximum: "))
 noppa = 1
-def roll_dice(max):
-    return random.randint(1,max)
-while noppa != maxnum:
-    noppa = roll_dice(maxnum)
+def roll_dice():
+    return random.randint(1,6)
+while noppa != 6:
+    noppa = roll_dice()
     print(noppa)
