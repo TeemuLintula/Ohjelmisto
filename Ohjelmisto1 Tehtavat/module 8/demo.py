@@ -12,4 +12,4 @@ yhteys = mysql.connector.connect(
 cursor = yhteys.cursor()
 cursor.execute("select name from airport where iso_country = 'FI';")
 tulos = cursor.fetchall()
-print(tulos)
+print(tulos[0])
