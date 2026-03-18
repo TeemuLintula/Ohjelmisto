@@ -1,6 +1,3 @@
-import random
-
-
 class Car:
     current_speed = 0
     travelled_distance = 0
@@ -18,21 +15,3 @@ class Car:
 
     def drive(self, hours):
         self.travelled_distance += hours * self.current_speed
-
-def race(cars):
-    raceEnded = False
-    while raceEnded == False:
-        for car in cars:
-            car.accelerate(random.randint(-10, 15))
-            car.drive(1)
-            if(car.travelled_distance > 10000):
-                print(f"Car: {car.license_plate} won the race")
-                raceEnded = True
-                break
-
-
-cars = [Car("ABC-123", 145),
-        Car("DEF-456", 230),
-        Car("GHI-678", 200)]
-
-race(cars)
