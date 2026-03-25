@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    const name = prompt("Type three numbers");
+    let sum = 0;
+    let product = 1;
+    for (let i = 0; i < name.length; i++){
+      sum += parseInt(name[i]);
+      product *= parseInt(name[i])
+    }
+    const average = sum / name.length
+    document.querySelector('#target').innerHTML =
+            'Sum: ' + sum + '<br>' +
+            'product: ' + product + '<br>' +
+            'average: ' + average;
+</script>
+</body>
+</html>
