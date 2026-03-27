@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    const year = prompt("Enter a year");
+    let isLeapYear = false;
+    if ((year % 4) == 0){
+      if ((year % 100) == 0){
+        if ((year % 400) == 0) {
+          isLeapYear = true
+        }
+      }
+      else {
+        isLeapYear = true;
+      }
+    }
+    if (isLeapYear){
+      document.querySelector('#target').innerHTML = 'Year ' + year + ' is a leap year';
+    }
+    else{
+      document.querySelector('#target').innerHTML = 'Year ' + year + ' is not a leap year';
+    }
+</script>
+</body>
+</html>

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
 <body>
+<p id="target"></p>
+<script>
+    'use strict';
+    const name = prompt("What is your name");
+    const classNum = Math.random(0, 4);
+    let  className = "";
+    if (classNum == 0){ className = "Gryffindor"}
+    else if (classNum == 1){ className = "Slytherin"}
+    else if (classNum == 2){ className = "Hufflepuff"}
+    else { className = "Ravenclaw"}
 
+   document.querySelector('#target').innerHTML = name + ', you are ' + className;
+</script>
 </body>
 </html>
