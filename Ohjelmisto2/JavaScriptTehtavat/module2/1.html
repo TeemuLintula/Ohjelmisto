@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    let numbers = []
+    let reversedNumbers = []
+    for (let i = 0; i < 5; i++) {
+        numbers.push(prompt("Enter number"))
+    }
+    for (let i = 0; i < numbers.length; i++){
+        reversedNumbers.push(numbers[4 - i])
+    }
+
+   console.log("numbers are: " + reversedNumbers);
+</script>
+</body>
+</html>
