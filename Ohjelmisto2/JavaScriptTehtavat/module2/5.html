@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    let number = 1
+    let numbers = []
+    while(true){
+        number = prompt("Enter a number")
+        if (numbers.includes(parseInt(number)) == false){
+            numbers.push(parseInt(number))
+        }
+        else {
+            console.log("Number has already been entered")
+            break;
+        }
+    }
+    numbers.sort();
+    console.log("numbers are: " + numbers);
+</script>
+</body>
+</html>

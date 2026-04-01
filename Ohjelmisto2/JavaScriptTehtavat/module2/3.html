@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
 <body>
-$END$
+<ul id="target"></ul>
+<script>
+    'use strict';
+    let dogs = []
+    for (let i = 0; i < 6; i++) {
+        dogs.push(prompt("Enter dog name"))
+    }
+
+    dogs.sort();
+    dogs.reverse();
+
+    document.querySelector('#target').innerHTML = dogs
+        .map(dog => `<li>${dog}</li>`)
+        .join('');
+</script>
 </body>
 </html>

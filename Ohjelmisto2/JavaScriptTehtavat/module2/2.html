@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<p id="target"></p>
+<ol id="target"></ol>
 <script>
     'use strict';
     let participantCount = prompt("How many participants?");
@@ -10,7 +10,9 @@
         participants[i] = prompt("Give a name to participant " + (i+1))
     }
     participants = Object.values(participants).sort();
-    document.write(participants)
+    document.querySelector('#target').innerHTML = participants
+        .map(p => `<li>${p}</li>`)
+        .join('');
 </script>
 </body>
 </html>
