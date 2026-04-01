@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+<p id="target"></p>
 <script>
     'use strict';
     let participantCount = prompt("How many participants?");
     let participants = {}
-    for (let i = 0; i < participantCount; i++){
-    participants.push({i : ""})
+    for (let i = 0; i < parseInt(participantCount); i++){
+        participants[i] = prompt("Give a name to participant " + (i+1))
     }
-
-   document.write();
+    participants = Object.values(participants).sort();
+    document.write(participants)
 </script>
 </body>
 </html>
