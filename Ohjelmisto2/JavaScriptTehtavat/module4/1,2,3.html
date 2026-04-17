@@ -30,7 +30,7 @@ document.addEventListener('submit', async function (event) {
         target.innerHTML = "";
 
         for (let i = 0; i < data.length; i++){
-          const list = target.appendChild(document.createElement('li'));
+          const list = target.appendChild(document.createElement('article'));
           const name = list.appendChild(document.createElement('h2'));
           name.appendChild(document.createTextNode(data[i].show.name));
           const url = list.appendChild(document.createElement('a'));
